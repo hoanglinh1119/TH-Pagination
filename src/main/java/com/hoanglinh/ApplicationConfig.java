@@ -1,8 +1,5 @@
 package com.hoanglinh;
 
-import com.hoanglinh.model.Pageable1;
-import com.hoanglinh.repository.CustomerRepository;
-//import com.hoanglinh.repository.impl.CustomerRepositoryImpl;
 import com.hoanglinh.service.CustomerService;
 import com.hoanglinh.service.impl.CustomerServiceImpl;
 import org.springframework.beans.BeansException;
@@ -51,7 +48,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     public SpringResourceTemplateResolver templateResolver(){
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
-        templateResolver.setPrefix("/WEB-INF/views/");
+        templateResolver.setPrefix("/WEB-INF/views");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCharacterEncoding("UTF-8");
@@ -121,8 +118,5 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     public CustomerService customerService(){
         return new CustomerServiceImpl();
     }
-    @Bean
-    public Pageable pageable(){
-        return new Pageable1();
-    }
+
 }

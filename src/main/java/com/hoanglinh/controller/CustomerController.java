@@ -2,17 +2,14 @@ package com.hoanglinh.controller;
 
 
 import com.hoanglinh.model.Customer;
-import com.hoanglinh.model.Pageable1;
 import com.hoanglinh.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
 import java.util.Optional;
 
 
